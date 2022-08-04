@@ -1,0 +1,32 @@
+
+spring:
+    profiles:
+      active: dev
+---
+spring:
+     profiles: course
+     datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        url: jdbc:mysql://localhost:3306/mydb
+        password: '123456'
+     jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: 'true'
+---
+spring:
+     profiles: dev
+     datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        url: jdbc:mysql://localhost:3306/schooldb
+        password: '123456'
+     jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: 'true'
+        
+        
+---
+
